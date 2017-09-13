@@ -1,0 +1,60 @@
+
+
+
+#DONE
+1- Rode o mesmo programa nos dados contendo anos de escolaridade (primeira
+coluna) versus salário (segunda coluna). Baixe os dados aquiVisualizar o
+documentoExibir em uma nova janela. Esse exemplo foi trabalhado em sala
+de aula em várias ocasiões. Os itens a seguir devem ser respondidos
+usando esses dados.
+
+
+#DONE
+2- Modifique o código original para imprimir o RSS a cada iteração do
+gradiente descendente.
+
+
+#DONE
+3- O que acontece com o RSS ao longo das iterações (aumenta ou diminui) se
+você usar 1000 iterações e um learning_rate (tamanho do passo do
+gradiente) de 0.001? Por que você acha que isso acontece?
+
+R: Ele diminui conforme as iterações, pois o algoritmo está chegando ao
+seu ponto de convergência, no caso o ponto mais baixo da função indicado
+pelo gradiente. Ou seja a nossa funcção esta se aproximando mais de como
+é a verdadeira formula na vida real.
+
+
+
+#DONE
+4- Teste valores diferentes do número de iterações e learning_rate até que
+w0 e w1 sejam aproximadamente iguais a -39 e 5 respectivamente. Reporte
+os valores do número de iterações e learning_rate usados para atingir
+esses valores.
+
+R: número de iterações = 59900
+   learning_rate = 0.0008
+
+
+
+#DONE
+5- O algoritmo do vídeo usa o número de iterações como critério de parada.
+Mude o algoritmo para considerar um critério de tolerância que é
+comparado ao tamanho do gradiente (como no algoritmo dos slides
+apresentados em sala). 
+
+
+
+
+#DONE
+6- Ache um valor de tolerância que se aproxime dos valores dos parâmetros
+do item 4 acima. Que valor foi esse? 
+
+R: Tolerancia = 29.83
+
+
+
+Você deve enviar o código modificado e as respostas para as perguntas
+acima.
+
+
