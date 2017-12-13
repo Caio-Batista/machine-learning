@@ -12556,6 +12556,15 @@ classes:  2
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Também se tem uma condição de ordenação chamada <b>ERROR_THRESHOLD</b> na qual se for maior que 20% a diferença entre as classes só se imprime a probabilidade da maior.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[244]:</div>
@@ -12589,7 +12598,7 @@ classes:  2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[234]:</div>
+<div class="prompt input_prompt">In&nbsp;[258]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">training</span><span class="p">)</span>
@@ -12635,7 +12644,7 @@ delta after 30000 iterations:0.333333332657
 delta after 40000 iterations:0.333333332369
 delta after 50000 iterations:0.333333331762
 saved synapses to: synapses.json
-processing time: 165.55631566047668 seconds
+processing time: 146.9043002128601 seconds
 </pre>
 </div>
 </div>
@@ -12646,10 +12655,10 @@ processing time: 165.55631566047668 seconds
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[235]:</div>
+<div class="prompt input_prompt">In&nbsp;[259]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accurracy</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -12657,7 +12666,7 @@ processing time: 165.55631566047668 seconds
     
     <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;violation&#39;</span> <span class="ow">in</span> <span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;violation&#39;</span><span class="p">)</span> <span class="ow">or</span> \
      <span class="p">(</span><span class="s1">&#39;violation&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;notviolation&#39;</span><span class="p">):</span>
-        <span class="n">accurracy</span> <span class="o">+=</span> <span class="mf">1.0</span>
+        <span class="n">accuracy</span> <span class="o">+=</span> <span class="mf">1.0</span>
     
     <span class="nb">print</span><span class="p">()</span> 
     
@@ -12931,10 +12940,10 @@ classification: [[&#39;notviolation&#39;, 0.99999999999472555]]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[236]:</div>
+<div class="prompt input_prompt">In&nbsp;[260]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accurracy: </span><span class="si">%s%%</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">accurracy</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>   
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%s%%</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">accuracy</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>   
 </pre></div>
 
 </div>
@@ -12951,7 +12960,7 @@ classification: [[&#39;notviolation&#39;, 0.99999999999472555]]
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Accurracy: 70.37037037037037%
+<pre>Accuracy: 70.37037037037037%
 </pre>
 </div>
 </div>
@@ -12978,7 +12987,7 @@ classification: [[&#39;notviolation&#39;, 0.99999999999472555]]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[228]:</div>
+<div class="prompt input_prompt">In&nbsp;[261]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">training</span><span class="p">)</span>
@@ -13027,7 +13036,7 @@ delta after 80000 iterations:0.00287170164791
 delta after 90000 iterations:0.002847132488
 delta after 100000 iterations:0.00282674750057
 saved synapses to: synapses.json
-processing time: 360.26281809806824 seconds
+processing time: 339.45823335647583 seconds
 </pre>
 </div>
 </div>
@@ -13038,10 +13047,10 @@ processing time: 360.26281809806824 seconds
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[229]:</div>
+<div class="prompt input_prompt">In&nbsp;[262]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accurracy</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -13049,7 +13058,7 @@ processing time: 360.26281809806824 seconds
     
     <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;violation&#39;</span> <span class="ow">in</span> <span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;violation&#39;</span><span class="p">)</span> <span class="ow">or</span> \
      <span class="p">(</span><span class="s1">&#39;violation&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;notviolation&#39;</span><span class="p">):</span>
-        <span class="n">accurracy</span> <span class="o">+=</span> <span class="mf">1.0</span>
+        <span class="n">accuracy</span> <span class="o">+=</span> <span class="mf">1.0</span>
     
     <span class="nb">print</span><span class="p">()</span> 
     
@@ -13323,10 +13332,10 @@ classification: [[&#39;notviolation&#39;, 0.99996489677605394]]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[230]:</div>
+<div class="prompt input_prompt">In&nbsp;[263]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accurracy: </span><span class="si">%s%%</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">accurracy</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>   
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%s%%</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">accuracy</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>   
 </pre></div>
 
 </div>
@@ -13343,7 +13352,7 @@ classification: [[&#39;notviolation&#39;, 0.99996489677605394]]
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Accurracy: 90.12345679012346%
+<pre>Accuracy: 90.12345679012346%
 </pre>
 </div>
 </div>
@@ -13432,10 +13441,10 @@ processing time: 548.1557412147522 seconds
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[245]:</div>
+<div class="prompt input_prompt">In&nbsp;[257]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accurracy</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -13443,7 +13452,7 @@ processing time: 548.1557412147522 seconds
     
     <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;violation&#39;</span> <span class="ow">in</span> <span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;violation&#39;</span><span class="p">)</span> <span class="ow">or</span> \
      <span class="p">(</span><span class="s1">&#39;violation&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;notviolation&#39;</span><span class="p">):</span>
-        <span class="n">accurracy</span> <span class="o">+=</span> <span class="mf">1.0</span>
+        <span class="n">accuracy</span> <span class="o">+=</span> <span class="mf">1.0</span>
     
     <span class="nb">print</span><span class="p">()</span> 
     
@@ -13717,10 +13726,10 @@ classification: [[&#39;notviolation&#39;, 0.99920629847077913]]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[246]:</div>
+<div class="prompt input_prompt">In&nbsp;[264]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accurracy: </span><span class="si">%s%%</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">accurracy</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>   
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%s%%</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">accuracy</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>   
 </pre></div>
 
 </div>
@@ -13737,7 +13746,7 @@ classification: [[&#39;notviolation&#39;, 0.99920629847077913]]
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Accurracy: 91.35802469135803%
+<pre>Accuracy: 90.12345679012346%
 </pre>
 </div>
 </div>
