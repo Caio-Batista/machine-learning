@@ -1,0 +1,4 @@
+def demo(lista):
+    soma = sum(lista)
+    return soma
+
